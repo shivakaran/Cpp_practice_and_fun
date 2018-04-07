@@ -1,0 +1,23 @@
+//Problem 1 on Project Euler website
+// Summing over mutliples of 3 and 5 under 10, 100 etc
+#include <iostream>
+#include <string>
+using namespace std;
+
+//using variables with global scope
+int limit;
+int sum = 0;
+
+int main()
+{
+    cout << "Choose your summation limit" << endl;
+    cin >> limit;
+    for(int n=0; n<limit ; n++) {
+        if(n%3 == 0)
+            sum += n;
+        else if(n%5 == 0)
+            sum += n;
+  }
+  
+  cout << "The sum of the multiples of 3 and 5 under " << limit << " is " << sum << endl;
+}
