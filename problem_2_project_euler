@@ -1,0 +1,30 @@
+//Problem 2 on Project Euler
+//Using CodeChef online IDE to run and edit program
+//Problem task: Find the sum of all even Fibonacci numbers below 4 million
+
+#include <iostream>
+using namespace std;
+
+//Using a function to create my Fibonacci sequence
+int fib(int n) {
+  if(1 == n || 2 == n)
+  {
+      return 1;
+  }
+  else
+  {
+      return fib(n-1) + fib(n-2);
+  }
+}
+
+int main() {
+    int sum;
+    for(int i=2; i<=35; i++)
+    {
+        if(fib(i)<4000000 && fib(i) % 2 ==0)
+            sum += fib(i);
+    }
+    cout << "The sum of even Fibonacci numbers below 4 million is " << sum <<endl;
+    return 0;
+}
+
