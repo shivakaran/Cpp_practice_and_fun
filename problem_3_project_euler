@@ -2,17 +2,18 @@
 //Find the largest prime of 600851475143
 
 #include <iostream>
+#include <cstdint>   //Needed to avoid integer overload when using 600851475143
 using namespace std;
 
 int largest_prime=0;
-//int num=600851475143;
+uint64_t num=600851475143;
 
 int main() {
-	for(int i=1; i<600851475144; i++) {
-	    if(600851475143%i == 0) {
+	for(int i=1; i<(num+1); i++) {
+	    if(num%i == 0) {
 	        largest_prime = i;
 	    }
 	}
-	cout << "The largest prime of 600851475143 is " << largest_prime << endl;
+	cout << "The largest prime of " << num << " is " << largest_prime << endl;
 	return 0;
 }
